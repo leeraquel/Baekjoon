@@ -6,15 +6,7 @@ function solution(letter) {
     '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
     '-.--':'y','--..':'z'
 }
-    const letterArray = letter.split(' ')
-    let result = []
-    for (let i = 0; i < letterArray.length; i++) {
-        Object.keys(morse).map((str)=> {
-            if(str === letterArray[i]) {
-                result.push(morse[str])
-            }
-            
-        })
-    }
-    return result.join('');
+
+    return letter.split(' ').map((str)=> morse[str]).join("")
+
 }
